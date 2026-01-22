@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>LUMINA — Science-backed skincare for serious results</title>
+    <meta name="description" content="LUMINA: professional-grade GHK-Cu peptides, small-batch made in Houston. Clinical concentrations at fair prices." />
+    <!-- Open Graph -->
+    <meta property="og:title" content="LUMINA — Science-backed skincare for serious results" />
+    <meta property="og:description" content="Professional GHK-Cu peptides for daily use and post-microneedling recovery. Bundles, starter kits, and subscriptions." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=LUMINA" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%232563EB'/%3E%3Ctext x='50' y='60' font-size='40' text-anchor='middle' fill='white' font-family='Poppins'%3EL%3C/text%3E%3C/svg%3E" />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      :root{
+        --primary: #2C2C2C; /* charcoal for CTAs */
+        --primary-dark: #3A3A3A; /* hover charcoal */
+        --secondary: #EBE5DC; /* warm beige */
+        --green: #9AA27A; /* soft warm green for success */
+        --neutral: #1A1A1A; /* primary text (charcoal/black) */
+        --bg: #F5F1E8; /* cream/warm white page background */
+        --muted-bg: #F5F1E8; /* page background */
+        --card-shadow: rgba(28,24,19,0.06);
+        --card-border: #EFE7DE; /* warm border */
+      }
+      /* Typography */
+      body{font-family:Poppins, Inter, ui-sans-serif, system-ui, -apple-system; background:var(--muted-bg); color:var(--neutral); line-height:1.6}
+      h1,h2,h3{font-family:Poppins, sans-serif; line-height:1.15}
+      h1{font-weight:800; font-size:clamp(1.6rem, 2.6vw, 2.25rem)}
+      h2{font-weight:700}
+      h3{font-weight:600}
+
+      /* Fade-in / motion */
+      .fade-in{opacity:0; transform:translateY(12px); transition:opacity .6s ease, transform .6s ease}
+      .fade-in.show{opacity:1; transform:none}
+
+      /* Cards */
+      .card-hover{transition:transform .18s ease, box-shadow .18s ease}
+      .card-hover:hover{transform:translateY(-4px); box-shadow:0 6px 20px var(--card-shadow)}
+
+      /* Buttons */
+      .btn-primary{background:var(--primary); color:#fff; padding:.6rem .9rem; border-radius:8px; font-weight:700; border:1px solid rgba(0,0,0,0.06)}
+      .btn-primary:hover{background:var(--primary-dark); box-shadow:0 8px 24px rgba(44,44,44,0.08)}
+      .btn-secondary{background:var(--bg); color:var(--neutral); padding:.6rem .9rem; border-radius:8px; border:1px solid rgba(0,0,0,0.06)}
+      .text-primary{color:var(--primary)}
+
+      /* Inputs */
+      input, textarea{border:1px solid rgba(0,0,0,0.06); border-radius:8px}
+      input:focus, textarea:focus{outline:none; box-shadow:0 0 0 4px rgba(44,44,44,0.08); border-color:var(--primary)}
+
+      /* Minimal shadows and separators */
+      .section-sep{height:1px; background:transparent; border-top:1px solid var(--card-border); margin:2rem 0}
+
+      /* Utility text color */
+      .muted{color:#9B9B9B}
+
+      /* Override light Tailwind gray for warm aesthetic */
+      .bg-gray-50{ background-color:var(--secondary) !important }
+
+      /* Warm card border helper */
+      .card-border{ border-color:var(--card-border) }
+    </style>
+  </head>
+  <body class="bg-[var(--bg)] text-[var(--neutral)] leading-relaxed">
+    <!-- STICKY HEADER -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-gray-100">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+        <a href="#hero" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-md bg-[var(--primary)] flex items-center justify-center text-white font-bold">L</div>
+          <div>
+            <div class="font-semibold text-base">LUMINA</div>
+            <div class="text-xs text-slate-500 -mt-0.5">Science-backed skincare</div>
+          </div>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm text-slate-700">
+          <a href="#problem" class="hover:underline">Problem</a>
+          <a href="#solution" class="hover:underline">Solution</a>
+          <a href="#bundles" class="hover:underline">Bundles</a>
+          <a href="#science" class="hover:underline">Science</a>
+          <a href="#faq" class="hover:underline">FAQ</a>
+          <a href="#contact" class="hover:underline">Contact</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <a href="#final-cta" class="hidden md:inline-block btn-primary text-sm">Join Waitlist</a>
+          <a href="#bundles" class="md:ml-2 border border-gray-200 px-3 py-2 rounded-md text-sm hidden md:inline btn-secondary">Shop Now</a>
+          <button id="mobile-menu-btn" class="md:hidden p-2">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 6h18M3 12h18M3 18h18" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section id="hero" class="max-w-6xl mx-auto px-4 py-12 md:py-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div class="fade-in">
+            <h1 class="text-3xl md:text-4xl font-extrabold text-[var(--neutral)]">Science-Backed Skincare. Fair Prices. Real Results.</h1>
+            <p class="mt-4 text-slate-600">Professional-grade GHK-Cu peptides for daily use. Stop paying $500/session for temporary results — get consistent clinical results at a fraction of the cost.</p>
+
+            <!-- Email capture form -->
+            <form id="waitlist-form" class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3" method="POST" action="https://formspree.io/f/xreevkrn">
+              <input type="hidden" name="source" value="lumina-landing-page">
+              <input name="name" required placeholder="Your name" class="px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--primary)]" />
+              <input name="email" type="email" required placeholder="Email address" class="px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--primary)]" />
+              <div class="sm:col-span-2 flex gap-3 mt-1">
+                <button type="submit" data-orig="Join Waitlist - Get Early Access" class="flex-1 btn-primary">Join Waitlist - Get Early Access</button>
+                <button type="button" id="scroll-to-bundles" class="btn-secondary">View Bundles</button>
+              </div>
+            </form>
+
+            <p id="form-msg" class="mt-3 text-sm text-[var(--green)] hidden">Thanks — you’re on the waitlist. Early supporters receive 25% off + free shipping.</p>
+          </div>
+
+          <!-- Visual: product placeholders -->
+          <div class="fade-in flex items-center justify-center">
+              <div class="w-full max-w-sm grid grid-cols-2 gap-4">
+              <div class="h-36 bg-white rounded-lg flex items-center justify-center border card-border">2mL vials</div>
+              <div class="h-36 bg-white rounded-lg flex items-center justify-center border card-border">10mL serum</div>
+              <div class="col-span-2 h-24 bg-white rounded-lg flex items-center justify-center border card-border">Starter kit mockup</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROBLEM -->
+      <section id="problem" class="py-12">
+        <div class="max-w-6xl mx-auto px-4">
+          <h2 class="text-2xl font-semibold text-[var(--neutral)]">The Problem</h2>
+          <p class="mt-2 text-slate-600">Professional microneedling costs $300–$500 per session and results can be temporary. Retail serums are often low-concentration or oxidized by the time you finish the bottle. Most people don't follow a consistent protocol.</p>
+
+          <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div class="p-6 bg-white rounded-md card-hover card-border" style="border:1px solid var(--card-border)">
+              <div class="bg-gray-50 p-4 rounded card-border" style="border:1px solid var(--card-border)">
+                <h3 class="font-semibold mt-2">Expensive treatments</h3>
+                <p class="muted mt-2">Professional sessions cost hundreds per visit and aren't a sustainable plan for ongoing results.</p>
+              </div>
+              <div class="p-6 bg-white rounded-md card-hover card-border" style="border:1px solid var(--card-border)">
+                <div class="text-primary text-xl">🧪</div>
+                <h3 class="font-semibold mt-2">Low-quality retail options</h3>
+                <p class="muted mt-2">Many serums have weak actives or oxidize in large bottles before use.</p>
+              </div>
+              <div class="p-6 bg-white rounded-md card-hover card-border" style="border:1px solid var(--card-border)">
+                <div class="text-primary text-xl">🔁</div>
+                <h3 class="font-semibold mt-2">No consistent protocol</h3>
+                <p class="muted mt-2">One-off treatments don't match the power of a consistent daily and post-treatment routine.</p>
+          </div>
+
+          <!-- Cost comparison timeline -->
+          <div class="mt-8 bg-white p-6 rounded-md" style="border:1px solid var(--card-border)">
+            <h4 class="font-semibold">Cost comparison (annualized)</h4>
+            <div class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div class="p-3 bg-gray-50 rounded">
+                <div class="text-xs text-slate-500">Professional microneedling</div>
+                <div class="text-lg font-bold mt-1">$1,800+</div>
+                <div class="text-sm text-slate-500">(4 sessions @ $450)</div>
+              </div>
+              <div class="p-3 bg-gray-50 rounded">
+                <div class="text-xs text-slate-500">Retail serums (average)</div>
+                <div class="text-lg font-bold mt-1">$300–500</div>
+                <div class="text-sm text-slate-500">(oxidation & low potency risks)</div>
+              </div>
+              <div class="p-3 bg-gray-50 rounded">
+                <div class="text-xs text-slate-500">LUMINA protocol</div>
+                <div class="text-lg font-bold mt-1">$38–155</div>
+                <div class="text-sm text-slate-500">(monthly options & bundles)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SOLUTION -->
+      <section id="solution" class="py-12">
+        <div class="max-w-6xl mx-auto px-4">
+          <h2 class="text-2xl font-semibold">The LUMINA Solution</h2>
+          <p class="muted mt-2">We combine clinical actives, fresh post-treatment vials, and bundled protocols so you can achieve real results without breaking the bank.</p>
+
+          <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="p-6 bg-white rounded-md card-hover" style="border:1px solid #EEF6FF">
+              <div class="text-primary text-xl">⚗️</div>
+              <h3 class="font-semibold mt-2">Clinical concentrations</h3>
+              <p class="muted mt-2">Daily serum at 1% GHK-Cu and targeted 0.5% recovery vials for post-treatment use.</p>
+            </div>
+            <div class="p-6 bg-white rounded-md card-hover" style="border:1px solid #EEF6FF">
+              <div class="text-secondary text-xl">🔬</div>
+              <h3 class="font-semibold mt-2">Synergistic formulas</h3>
+              <p class="muted mt-2">GHK-Cu + Matrixyl + Niacinamide work together to support collagen, repair, and barrier function.</p>
+            </div>
+            <div class="p-6 bg-white rounded-md card-hover" style="border:1px solid #EEF6FF">
+              <div class="text-primary text-xl">📦</div>
+              <h3 class="font-semibold mt-2">Bundled protocol</h3>
+              <p class="muted mt-2">Curated kits and subscription options to keep your routine consistent and effective.</p>
+            </div>
+          </div>
+
+          <div class="mt-6 bg-white p-6 rounded-md shadow-sm text-center">
+            <div class="text-sm text-slate-500">The value</div>
+            <div class="text-2xl font-bold mt-2">$38 / month for daily serum vs. $500 per single professional session</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOW IT WORKS -->
+      <section id="how" class="py-12">
+        <div class="max-w-6xl mx-auto px-4">
+          <h2 class="text-2xl font-semibold text-[var(--neutral)]">The LUMINA Protocol</h2>
+          <div class="mt-6 grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="bg-white p-5 rounded text-center card-border" style="border:1px solid var(--card-border)">
+              <div class="text-2xl text-primary">1</div>
+              <div class="font-semibold mt-2">Microneedle weekly</div>
+              <div class="muted mt-1">Use the LUMINA derma stamp (0.5mm)</div>
+            </div>
+            <div class="bg-white p-5 rounded text-center card-border" style="border:1px solid var(--card-border)">
+              <div class="text-2xl text-primary">2</div>
+              <div class="font-semibold mt-2">Apply recovery vial</div>
+              <div class="muted mt-1">Open a fresh 0.5% 2mL vial post-treatment</div>
+            </div>
+            <div class="bg-white p-5 rounded text-center card-border" style="border:1px solid var(--card-border)">
+              <div class="text-2xl text-primary">3</div>
+              <div class="font-semibold mt-2">Use daily serum</div>
+              <div class="muted mt-1">1% GHK-Cu + Matrixyl for daily maintenance</div>
+            </div>
+            <div class="bg-white p-5 rounded text-center card-border" style="border:1px solid var(--card-border)">
+              <div class="text-2xl text-[var(--green)]">4</div>
+              <div class="font-semibold mt-2">Support from within</div>
+              <div class="muted mt-1">Take zinc to support collagen synthesis</div>
+            </div>
+          </div>
+          <p class="mt-6 text-slate-600">See visible improvements in 4–8 weeks with consistent use.</p>
+        </div>
+      </section>
+
+      <!-- FEATURED BUNDLES -->
+      <section id="bundles" class="py-12">
+        <div class="max-w-6xl mx-auto px-4">
+          <h2 class="text-2xl font-semibold text-[var(--neutral)]">Featured Bundles</h2>
+          <p class="mt-2 text-slate-600">Curated kits for every level — from starter to subscription.</p>
+
+          <div class="mt-6 grid grid-cols-1 md:grid-cols-4 gap-6">
+            <!-- Bundle 1 -->
+            <div class="p-6 bg-white rounded-lg card-hover card-border" style="border:1px solid var(--card-border)">
+              <div class="text-sm muted">Monthly Glow Protocol</div>
+              <h3 class="font-semibold text-lg mt-2">$85</h3>
+              <p class="muted mt-2">4× Recovery vials (2mL) + 1× Daily serum (10mL)</p>
+              <div class="mt-4 text-sm text-[var(--green)] font-semibold">Save $15</div>
+              <button class="mt-4 w-full btn-primary">Add to Cart</button>
+            </div>
+
+            <!-- Bundle 2 -->
+            <div class="p-6 bg-white rounded-lg card-hover card-border" style="border:1px solid var(--card-border)">
+              <div class="text-sm muted">Complete Starter Kit</div>
+              <h3 class="font-semibold text-lg mt-2">$120</h3>
+              <p class="muted mt-2">Derma stamp + 4× Recovery vials + 1× Daily serum + Zinc</p>
+              <div class="mt-4 text-sm text-[var(--green)] font-semibold">Save $23</div>
+              <button class="mt-4 w-full btn-primary">Add to Cart</button>
+            </div>
+
+            <!-- Bundle 3 -->
+            <div class="p-6 bg-white rounded-lg card-hover card-border" style="border:1px solid var(--card-border)">
+              <div class="text-sm muted">2-Month Supply</div>
+              <h3 class="font-semibold text-lg mt-2">$155</h3>
+              <p class="muted mt-2">8× Recovery vials + 2× Daily serums</p>
+              <div class="mt-4 text-sm text-[var(--green)] font-semibold">Save $30</div>
+              <button class="mt-4 w-full btn-primary">Add to Cart</button>
+            </div>
+
+            <!-- Bundle 4 -->
+            <div class="p-6 bg-white rounded-lg card-hover card-border" style="border:1px solid var(--card-border)">
+              <div class="text-sm muted">Ultimate Protocol (Subscription)</div>
+              <h3 class="font-semibold text-lg mt-2">First month $130 • $75/mo</h3>
+              <p class="muted mt-2">First month includes derma stamp. Monthly: 4 vials + 1 serum + zinc.</p>
+              <div class="mt-4 text-sm text-[var(--green)] font-semibold">Auto-deliver & save</div>
+              <button class="mt-4 w-full btn-secondary">Join Subscription</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCIENCE -->
+      <section id="science" class="py-12 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+          <h2 class="text-2xl font-semibold">Why LUMINA Works</h2>
+          <p class="muted mt-2">We use studied actives at meaningful concentrations and package them to preserve potency.</p>
+
+            <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-gray-50 p-4 rounded card-border" style="border:1px solid var(--card-border)">
+              <h4 class="font-semibold">GHK-Cu</h4>
+              <p class="muted mt-1">Copper signaling peptide that supports collagen synthesis and wound repair. Used at clinical strengths for results.</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded card-border" style="border:1px solid var(--card-border)">
+              <h4 class="font-semibold">Matrixyl</h4>
+              <p class="muted mt-1">Peptide technology that mimics damaged collagen to trigger repair mechanisms.</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded card-border" style="border:1px solid var(--card-border)">
+              <h4 class="font-semibold">Niacinamide</h4>
+              <p class="muted mt-1">Supports barrier function, reduces inflammation, and improves skin tone.</p>
+            </div>
+          </div>
+
+          <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-white p-4 rounded shadow-sm">
+              <h4 class="font-semibold">Packaging & testing</h4>
+              <p class="text-sm text-slate-600 mt-1">Small-batch, Houston-made. Pharmaceutical-grade peptides with quality checks to preserve freshness and potency.</p>
+            </div>
+            <div class="bg-white p-4 rounded shadow-sm">
+              <h4 class="font-semibold">Trust</h4>
+              <ul class="mt-2 text-sm text-slate-600 space-y-1">
+                <li>Pharmaceutical-grade actives</li>
+                <li>Small-batch production</li>
+                <li>Quality tested</li>
+              </ul>
+            </div>
+              <div class="bg-white p-4 rounded shadow-sm card-border" style="border:1px solid var(--card-border)">
+                <h4 class="font-semibold">Packaging & testing</h4>
+                <p class="text-sm text-slate-600 mt-1">Small-batch, Houston-made. Pharmaceutical-grade peptides with quality checks to preserve freshness and potency.</p>
+              </div>
+              <div class="bg-white p-4 rounded shadow-sm card-border" style="border:1px solid var(--card-border)">
+                <h4 class="font-semibold">Trust</h4>
+                <ul class="mt-2 text-sm text-slate-600 space-y-1">
+                  <li>Pharmaceutical-grade actives</li>
+                  <li>Small-batch production</li>
+                  <li>Quality tested</li>
+                </ul>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT THE FOUNDER REMOVED FOR CLINICAL MODERN LUXURY AESTHETIC -->
+
+      <!-- TESTIMONIALS & FAQ -->
+      <section id="social" class="py-12">
+        <div class="max-w-6xl mx-auto px-4">
+          <h2 class="text-2xl font-semibold text-[var(--neutral)]">Trusted by microneedling enthusiasts</h2>
+          <div class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-white p-4 rounded shadow-sm">
+              <div class="font-semibold">"My skin healed faster and looked better after 6 weeks."</div>
+              <div class="text-sm text-slate-500 mt-2">— K. M., Houston</div>
+            </div>
+            <div class="bg-white p-4 rounded shadow-sm">
+              <div class="font-semibold">"Cost-effective and potent—finally a brand that understands results."</div>
+              <div class="text-sm text-slate-500 mt-2">— J. L., Austin</div>
+            </div>
+            <div class="bg-white p-4 rounded shadow-sm">
+              <div class="font-semibold">"The derma stamp + recovery vials made my weekly routine simple."</div>
+              <div class="text-sm text-slate-500 mt-2">— S. R., Online Reviewer</div>
+            </div>
+          </div>
+
+          <div id="faq" class="mt-8">
+            <h3 class="font-semibold text-[var(--neutral)]">FAQ</h3>
+            <div class="mt-4 space-y-3">
+              <details class="bg-white p-3 rounded"><summary class="font-semibold">What is GHK-Cu?</summary><div class="mt-2 text-sm text-slate-600">GHK-Cu is a copper peptide that supports collagen and tissue repair; used clinically for wound healing and anti-aging.</div></details>
+              <details class="bg-white p-3 rounded"><summary class="font-semibold">How is LUMINA different?</summary><div class="mt-2 text-sm text-slate-600">We use pharmaceutical-grade actives at studied concentrations and fresh packaging to prevent oxidation.</div></details>
+              <details class="bg-white p-3 rounded"><summary class="font-semibold">Can I use this without microneedling?</summary><div class="mt-2 text-sm text-slate-600">Yes. The daily serum is safe for topical use; recovery vials are optimized for post-microneedling care.</div></details>
+              <details class="bg-white p-3 rounded"><summary class="font-semibold">How long do the serums last?</summary><div class="mt-2 text-sm text-slate-600">Unopened vials and bottles last months when stored cool & dark. Opened vials are single-use; bottles should be used per label guidance.</div></details>
+              <details class="bg-white p-3 rounded"><summary class="font-semibold">Shipping & refunds?</summary><div class="mt-2 text-sm text-slate-600">We ship from Houston. Refunds and satisfaction policies are available—contact hello@lumina.co.</div></details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL CTA -->
+      <section id="final-cta" class="py-12" style="background:linear-gradient(180deg,var(--primary),var(--primary-dark)); color:white;">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+          <h2 class="text-2xl font-semibold">Ready to Transform Your Skincare?</h2>
+          <p class="mt-2">Join 500+ customers on the path to better skin. Early supporters get 25% off + free shipping.</p>
+
+          <form id="waitlist-form-2" class="mt-6 max-w-xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-3" method="POST" action="https://formspree.io/f/xreevkrn">
+            <input type="hidden" name="source" value="lumina-landing-page">
+            <input name="name" required placeholder="Your name" class="px-4 py-3 rounded" />
+            <input name="email" type="email" required placeholder="Email address" class="px-4 py-3 rounded" />
+            <button type="submit" class="sm:col-span-2 mt-2 bg-white text-[var(--primary)] px-4 py-3 rounded font-semibold">Join Waitlist</button>
+          </form>
+
+          <p class="mt-3 text-sm">Houston-made • Small-batch • Pharmaceutical-grade</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-gray-100 py-8">
+      <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-slate-600">
+        <div>
+          <div class="font-semibold">LUMINA</div>
+          <div class="text-xs mt-1">Science-backed skincare • Houston, TX</div>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="#" class="text-slate-500">Instagram</a>
+          <a href="#" class="text-slate-500">TikTok</a>
+          <a href="mailto:hello@lumina.co" class="text-slate-500">hello@lumina.co</a>
+        </div>
+        <div class="text-right text-xs">© 2026 LUMINA. This product is not intended to diagnose, treat, cure, or prevent any disease.</div>
+      </div>
+    </footer>
+    <!-- Minimal JS: form handling, smooth scroll, animations -->
+    <script>
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(a=>{
+        a.addEventListener('click', e=>{
+          const href=a.getAttribute('href');
+          if(href && href.length>1){ e.preventDefault(); const el=document.querySelector(href); if(el) el.scrollIntoView({behavior:'smooth',block:'start'}); }
+        })
+      })
+
+      // Form handling with basic validation and inline success
+      function attachForm(id){
+        const form=document.getElementById(id); if(!form) return;
+        form.addEventListener('submit', async (e)=>{
+          e.preventDefault();
+          const submitBtn=form.querySelector('button[type=submit]');
+          const origText = submitBtn?.textContent || '';
+          const formData=new FormData(form);
+          const email = formData.get('email')?.toString().trim();
+          const name = formData.get('name')?.toString().trim();
+          if(!name || !email){ alert('Please provide name and email.'); return; }
+          // simple email regex
+          const re=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if(!re.test(email)){ alert('Please enter a valid email.'); return; }
+          submitBtn.disabled=true; submitBtn.textContent='Sending...';
+          try{
+            const resp=await fetch(form.action, {method:'POST', body:formData, headers:{'Accept':'application/json'}});
+            if(resp.ok){
+              const success = form.querySelector('#form-msg')||document.getElementById('form-msg');
+              if(success) success.classList.remove('hidden');
+              form.reset();
+            }else{
+              let msg='Submission failed. Please try again.';
+              try{ const data=await resp.json(); if(data && data.error) msg=data.error }catch(e){}
+              alert(msg);
+            }
+          }catch(err){ alert('Network error. Please try again.'); }
+          finally{ submitBtn.disabled=false; submitBtn.textContent=origText }
+        })
+      }
+      attachForm('waitlist-form'); attachForm('waitlist-form-2');
+
+        // Fade-in on scroll with optional data-delay
+        const obs=new IntersectionObserver((entries)=>{ entries.forEach(entry=>{ if(entry.isIntersecting){ const el=entry.target; el.classList.add('show'); } }) }, {threshold:0.12});
+        document.querySelectorAll('.fade-in').forEach(el=>{
+          const d=el.getAttribute('data-delay'); if(d) el.style.transitionDelay = d + 'ms';
+          obs.observe(el);
+        });
+
+      // Scrollers
+      document.getElementById('scroll-to-bundles')?.addEventListener('click', ()=>document.getElementById('bundles')?.scrollIntoView({behavior:'smooth'}));
+    </script>
+    </body>
+  </html>
+
