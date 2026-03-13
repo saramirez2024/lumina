@@ -1,0 +1,2253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUMINA | Science-Backed Copper Peptide Skincare</title>
+  <meta name="description" content="Pro-level skin results, step by step. Recovery vials for stressed skin, a daily serum for long-term results, and clear instructions so you always know what to use and when.">
+
+  <!-- Google Fonts - Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ========================================
+       CSS DESIGN SYSTEM
+       ======================================== */
+    :root {
+      --primary: #2C2C2C;
+      --primary-dark: #3A3A3A;
+      --secondary: #EBE5DC;
+      --accent: #9AA27A;
+      --accent-gold: #C9A962;
+      --accent-gold-light: #E5D4A8;
+      --neutral: #1A1A1A;
+      --bg: #F5F1E8;
+      --card-bg: #FFFFFF;
+      --card-border: #EFE7DE;
+      --card-shadow: rgba(28,24,19,0.06);
+    }
+
+    /* Reset */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      font-weight: 400;
+      color: var(--neutral);
+      background-color: var(--bg);
+    }
+
+    /* Typography */
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-weight: 800;
+    }
+
+    /* Utility Classes */
+    .max-w-6xl {
+      max-width: 1152px;
+    }
+
+    .max-w-4xl {
+      max-width: 896px;
+    }
+
+    .max-w-3xl {
+      max-width: 768px;
+    }
+
+    .max-w-xl {
+      max-width: 576px;
+    }
+
+    .max-w-lg {
+      max-width: 512px;
+    }
+
+    .mx-auto {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .px-4 {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    .py-3 { padding-top: 12px; padding-bottom: 12px; }
+    .py-6 { padding-top: 24px; padding-bottom: 24px; }
+    .py-8 { padding-top: 32px; padding-bottom: 32px; }
+    .py-12 { padding-top: 48px; padding-bottom: 48px; }
+    .py-16 { padding-top: 64px; padding-bottom: 64px; }
+    .py-24 { padding-top: 96px; padding-bottom: 96px; }
+
+    .mt-2 { margin-top: 8px; }
+    .mt-3 { margin-top: 12px; }
+    .mt-4 { margin-top: 16px; }
+    .mt-6 { margin-top: 24px; }
+    .mt-8 { margin-top: 32px; }
+    .mt-12 { margin-top: 48px; }
+    .mb-2 { margin-bottom: 8px; }
+    .mb-3 { margin-bottom: 12px; }
+    .mb-4 { margin-bottom: 16px; }
+    .mb-6 { margin-bottom: 24px; }
+    .mb-8 { margin-bottom: 32px; }
+    .mb-12 { margin-bottom: 48px; }
+
+    .text-center { text-align: center; }
+    .text-left { text-align: left; }
+
+    .text-sm { font-size: 14px; }
+    .text-lg { font-size: 18px; }
+    .text-xl { font-size: 20px; }
+    .text-2xl { font-size: 24px; }
+    .text-3xl { font-size: 30px; }
+    .text-4xl { font-size: 36px; }
+
+    .font-semibold { font-weight: 600; }
+    .font-bold { font-weight: 700; }
+
+    .text-slate-500 { color: #64748b; }
+    .text-slate-600 { color: #475569; }
+    .text-slate-700 { color: #334155; }
+
+    .opacity-75 { opacity: 0.75; }
+    .opacity-90 { opacity: 0.9; }
+
+    .underline { text-decoration: underline; }
+
+    .flex { display: flex; }
+    .flex-col { flex-direction: column; }
+    .flex-wrap { flex-wrap: wrap; }
+    .flex-1 { flex: 1; }
+    .items-center { align-items: center; }
+    .items-start { align-items: flex-start; }
+    .justify-center { justify-content: center; }
+    .justify-between { justify-content: space-between; }
+    .gap-3 { gap: 12px; }
+    .gap-4 { gap: 16px; }
+    .gap-6 { gap: 24px; }
+    .gap-8 { gap: 32px; }
+    .gap-12 { gap: 48px; }
+
+    .grid { display: grid; }
+    .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+    .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .col-span-2 { grid-column: span 2 / span 2; }
+
+    .space-y-1 > * + * { margin-top: 4px; }
+    .space-y-2 > * + * { margin-top: 8px; }
+    .space-y-3 > * + * { margin-top: 12px; }
+    .space-y-6 > * + * { margin-top: 24px; }
+
+    .hidden { display: none !important; }
+    .inline-block { display: inline-block; }
+
+    .w-full { width: 100%; }
+    .w-12 { width: 48px; }
+    .h-12 { height: 48px; }
+    .h-32 { height: 128px; }
+    .h-40 { height: 160px; }
+
+    .rounded-lg { border-radius: 8px; }
+    .rounded-full { border-radius: 9999px; }
+
+    .bg-white { background-color: white; }
+    .bg-slate-50 { background-color: #f8fafc; }
+
+    .border { border-width: 1px; border-style: solid; }
+    .border-2 { border-width: 2px; border-style: solid; }
+    .border-l-4 { border-left-width: 4px; border-left-style: solid; }
+
+    .p-4 { padding: 16px; }
+    .p-6 { padding: 24px; }
+    .p-8 { padding: 32px; }
+
+    .leading-none { line-height: 1; }
+
+    /* Button Styles */
+    .btn-primary {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      border: 1px solid rgba(0,0,0,0.08);
+      min-height: 44px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      box-shadow: 0 8px 24px rgba(44,44,44,0.12);
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      background: white;
+      color: var(--neutral);
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      border: 1px solid var(--card-border);
+      min-height: 44px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-secondary:hover {
+      background: var(--secondary);
+      box-shadow: 0 4px 12px rgba(44,44,44,0.08);
+    }
+
+    /* Card Styles */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 24px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px var(--card-shadow);
+    }
+
+    /* Fade-in Animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ========================================
+       HEADER
+       ======================================== */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(245, 241, 232, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .header-inner {
+      max-width: 1152px;
+      margin: 0 auto;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+    }
+
+    .logo-text-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-text {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--neutral);
+      letter-spacing: 2px;
+      line-height: 1.1;
+    }
+
+    .logo-subtitle {
+      font-size: 9px;
+      color: var(--accent-gold);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-desktop {
+      display: none;
+    }
+
+    .nav-link {
+      color: var(--neutral);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: background 0.2s ease;
+    }
+
+    .nav-link:hover {
+      background: var(--secondary);
+    }
+
+    .header-ctas {
+      display: flex;
+      gap: 8px;
+    }
+
+    .header-ctas .btn-primary,
+    .header-ctas .btn-secondary {
+      padding: 8px 16px;
+      font-size: 14px;
+      min-height: 40px;
+    }
+
+    .mobile-menu-btn {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    .mobile-menu-btn span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--neutral);
+      border-radius: 2px;
+      transition: all 0.2s ease;
+    }
+
+    .mobile-nav {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: white;
+      border-bottom: 1px solid var(--card-border);
+      padding: 16px;
+      box-shadow: 0 8px 24px var(--card-shadow);
+    }
+
+    .mobile-nav.active {
+      display: block;
+    }
+
+    .mobile-nav a {
+      display: block;
+      padding: 12px 16px;
+      color: var(--neutral);
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 8px;
+    }
+
+    .mobile-nav a:hover {
+      background: var(--secondary);
+    }
+
+    /* Products dropdown */
+    .nav-dropdown {
+      position: relative;
+    }
+
+    .nav-dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 6px;
+      min-width: 168px;
+      box-shadow: 0 8px 24px var(--card-shadow);
+      z-index: 200;
+    }
+
+    .nav-dropdown:hover .nav-dropdown-menu {
+      display: block;
+    }
+
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 8px 12px;
+      color: var(--neutral);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 6px;
+      white-space: nowrap;
+    }
+
+    .nav-dropdown-menu a:hover {
+      background: var(--secondary);
+    }
+
+    /* ========================================
+       HERO
+       ======================================== */
+    .hero {
+      background: var(--bg);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 32px;
+      color: var(--neutral);
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .hero-ctas .btn-primary,
+    .hero-ctas .btn-secondary {
+      text-align: center;
+    }
+
+    .product-preview {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      align-items: end;
+    }
+
+    .product-image-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .product-image {
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 8px 24px rgba(0,0,0,0.1));
+      transition: transform 0.3s ease;
+    }
+
+    .product-image:hover {
+      transform: scale(1.05);
+    }
+
+    .product-label {
+      margin-top: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--neutral);
+    }
+
+    .product-placeholder {
+      height: 160px;
+      background: white;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--card-border);
+      font-size: 14px;
+      color: var(--neutral);
+      text-align: center;
+      padding: 16px;
+    }
+
+    .product-placeholder.full-width {
+      grid-column: span 2;
+      height: 128px;
+    }
+
+    /* ========================================
+       BUNDLES
+       ======================================== */
+    .bundles {
+      background: white;
+    }
+
+    .bundle-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .bundle-card {
+      position: relative;
+      background: white;
+      border: 2px solid var(--card-border);
+      border-radius: 8px;
+      padding: 24px;
+      transition: all 0.2s ease;
+    }
+
+    .bundle-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px var(--card-shadow);
+    }
+
+    .bundle-badge {
+      position: absolute;
+      top: -12px;
+      right: 16px;
+      background: var(--accent);
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+
+    .bundle-images {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 8px;
+      margin-bottom: 16px;
+      padding: 16px 0;
+      min-height: 120px;
+    }
+
+    .bundle-product-img {
+      height: 100px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+    }
+
+    .bundle-product-img-small {
+      height: 80px;
+    }
+
+    .bundle-name {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--neutral);
+      margin-bottom: 4px;
+    }
+
+    .bundle-price {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--neutral);
+    }
+
+    .bundle-includes {
+      margin: 16px 0;
+    }
+
+    .bundle-includes h4 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--neutral);
+      margin-bottom: 8px;
+    }
+
+    .bundle-includes ul {
+      list-style: none;
+      font-size: 14px;
+      color: var(--neutral);
+    }
+
+    .bundle-includes li {
+      padding: 4px 0;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .bundle-includes li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .bundle-best-for {
+      font-size: 13px;
+      color: var(--neutral);
+      background: var(--secondary);
+      padding: 12px;
+      border-radius: 6px;
+      margin-bottom: 16px;
+    }
+
+    .bundle-quiz-link {
+      font-size: 13px;
+      color: var(--accent);
+      text-decoration: none;
+      display: block;
+      margin-bottom: 16px;
+    }
+
+    .bundle-quiz-link:hover {
+      text-decoration: underline;
+    }
+
+    .bundle-card .btn-primary {
+      width: 100%;
+      text-align: center;
+    }
+
+    .individual-note {
+      background: var(--secondary);
+      border-radius: 8px;
+      padding: 24px;
+    }
+
+    /* ========================================
+       BRIDGE
+       ======================================== */
+    .bridge {
+      background: linear-gradient(to bottom, white, var(--bg));
+    }
+
+    /* ========================================
+       QUIZ
+       ======================================== */
+    .quiz {
+      background: var(--bg);
+    }
+
+    .quiz-container {
+      background: white;
+      padding: 32px;
+      border-radius: 8px;
+      border: 1px solid var(--card-border);
+    }
+
+    .quiz-progress {
+      font-size: 14px;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .quiz-question {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 24px;
+      color: var(--neutral);
+    }
+
+    .quiz-options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .quiz-btn {
+      width: 100%;
+      text-align: left;
+      padding: 16px;
+      background: white;
+      border: 2px solid var(--card-border);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+
+    .quiz-btn:hover {
+      border-color: var(--primary);
+      background: var(--secondary);
+    }
+
+    .quiz-btn-title {
+      font-weight: 600;
+      color: var(--neutral);
+      font-size: 16px;
+    }
+
+    .quiz-btn-desc {
+      font-size: 14px;
+      color: var(--neutral);
+      margin-top: 4px;
+    }
+
+    .quiz-result {
+      background: white;
+      padding: 32px;
+      border-radius: 8px;
+      border: 2px solid var(--accent);
+    }
+
+    .result-badge {
+      display: inline-block;
+      padding: 8px 16px;
+      background: rgba(154, 162, 122, 0.1);
+      color: var(--accent);
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .result-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--neutral);
+      margin-bottom: 16px;
+    }
+
+    .result-plan {
+      background: var(--secondary);
+      padding: 16px;
+      border-radius: 8px;
+      margin: 24px 0;
+    }
+
+    .result-plan h4 {
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .result-ctas {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .result-ctas .btn-primary,
+    .result-ctas .btn-secondary {
+      text-align: center;
+    }
+
+    .expandable-info {
+      margin-top: 24px;
+      padding: 16px;
+      background: #f8fafc;
+      border-radius: 8px;
+      font-size: 14px;
+      color: var(--neutral);
+    }
+
+    /* ========================================
+       EMAIL CAPTURE
+       ======================================== */
+    .email-capture {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+    }
+
+    .email-form {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .email-form input {
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+      font-family: inherit;
+      color: var(--neutral);
+    }
+
+    .email-form input:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(255,255,255,0.3);
+    }
+
+    .email-form button {
+      width: 100%;
+      background: white;
+      color: var(--primary);
+      padding: 16px 24px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.2s ease;
+    }
+
+    .email-form button:hover {
+      opacity: 0.9;
+    }
+
+    .email-form button:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+
+    .email-benefits {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px 24px;
+      font-size: 14px;
+      opacity: 0.85;
+    }
+
+    .success-msg {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* ========================================
+       SAFETY
+       ======================================== */
+    .safety {
+      background: white;
+    }
+
+    .safety-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .safety-card {
+      padding: 24px;
+      background: var(--bg);
+      border-radius: 8px;
+      border: 1px solid var(--card-border);
+    }
+
+    .safety-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(154, 162, 122, 0.1);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+
+    .safety-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .safety-card ul {
+      list-style: none;
+      font-size: 14px;
+      color: var(--neutral);
+    }
+
+    .safety-card li {
+      padding: 4px 0;
+    }
+
+    .safety-philosophy {
+      padding: 24px;
+      background: #f8fafc;
+      border-radius: 8px;
+      border-left: 4px solid var(--accent);
+    }
+
+    .safety-philosophy h4 {
+      font-weight: 600;
+      color: var(--neutral);
+      margin-bottom: 8px;
+    }
+
+    /* ========================================
+       SCIENCE
+       ======================================== */
+    .science {
+      background: var(--bg);
+    }
+
+    .science-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .ingredient-card {
+      background: white;
+      padding: 24px;
+      border-radius: 8px;
+      border: 1px solid var(--card-border);
+    }
+
+    .ingredient-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+
+    .ingredient-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .info-btn {
+      background: none;
+      border: none;
+      color: var(--accent);
+      font-size: 14px;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .info-btn:hover {
+      text-decoration: underline;
+    }
+
+    .ingredient-concentration {
+      font-size: 12px;
+      color: var(--neutral);
+      margin-top: 12px;
+    }
+
+    .nerd-lane-toggle {
+      background: none;
+      border: none;
+      color: var(--accent);
+      text-decoration: underline;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: inherit;
+    }
+
+    .nerd-lane {
+      background: white;
+      padding: 32px;
+      border-radius: 8px;
+      border: 2px solid var(--accent);
+    }
+
+    .nerd-lane h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .nerd-lane h4 {
+      font-weight: 600;
+      color: var(--neutral);
+      margin-bottom: 8px;
+    }
+
+    /* Popup Modal */
+    .popup-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+
+    .popup-content {
+      background: white;
+      border-radius: 8px;
+      max-width: 512px;
+      width: 100%;
+      padding: 24px;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    .popup-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 16px;
+    }
+
+    .popup-header h3 {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .popup-close {
+      background: none;
+      border: none;
+      font-size: 28px;
+      line-height: 1;
+      cursor: pointer;
+      color: var(--neutral);
+      padding: 4px 8px;
+      border-radius: 4px;
+      transition: background 0.2s ease;
+    }
+
+    .popup-close:hover {
+      background: var(--secondary);
+    }
+
+    /* ========================================
+       FAQ
+       ======================================== */
+    .faq {
+      background: white;
+    }
+
+    .faq-list {
+      max-width: 768px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .faq-item summary {
+      padding: 20px 0;
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--neutral);
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: "+";
+      font-size: 24px;
+      font-weight: 400;
+      color: var(--accent);
+      transition: transform 0.2s ease;
+    }
+
+    .faq-item[open] summary::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      padding-bottom: 20px;
+      font-size: 14px;
+      color: var(--neutral);
+      line-height: 1.6;
+    }
+
+    /* ========================================
+       FINAL CTA
+       ======================================== */
+    .final-cta {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+    }
+
+    .final-cta .cta-btn {
+      display: inline-block;
+      background: white;
+      color: var(--primary);
+      padding: 16px 32px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 18px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .final-cta .cta-btn:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+    }
+
+    /* ========================================
+       FOOTER
+       ======================================== */
+    .footer {
+      background: var(--neutral);
+      color: white;
+      padding: 48px 16px 24px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      max-width: 1152px;
+      margin: 0 auto;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .footer-logo-icon {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      filter: brightness(1.2);
+    }
+
+    .footer-logo {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    .footer-tagline {
+      font-size: 14px;
+      opacity: 0.7;
+    }
+
+    .footer-links h4 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .footer-links ul {
+      list-style: none;
+    }
+
+    .footer-links a {
+      color: white;
+      opacity: 0.7;
+      text-decoration: none;
+      font-size: 14px;
+      display: block;
+      padding: 4px 0;
+      transition: opacity 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      opacity: 1;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 16px;
+    }
+
+    .footer-social a {
+      color: white;
+      opacity: 0.7;
+      font-size: 14px;
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .footer-social a:hover {
+      opacity: 1;
+    }
+
+    .footer-bottom {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      text-align: center;
+    }
+
+    .footer-disclaimer {
+      font-size: 12px;
+      opacity: 0.5;
+      margin-bottom: 8px;
+    }
+
+    .footer-copyright {
+      font-size: 12px;
+      opacity: 0.5;
+    }
+
+    /* ========================================
+       RESPONSIVE - TABLET & DESKTOP
+       ======================================== */
+    @media (min-width: 640px) {
+      .hero-ctas {
+        flex-direction: row;
+      }
+
+      .email-form {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .result-ctas {
+        flex-direction: row;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .nav-desktop {
+        display: flex;
+        gap: 8px;
+      }
+
+      .mobile-menu-btn {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .bundle-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .safety-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .science-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .hero h1 {
+        font-size: 48px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- ========================================
+       HEADER
+       ======================================== -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <img src="images/logo-icon.png" alt="LUMINA" class="logo-icon">
+        <div class="logo-text-container">
+          <span class="logo-text">LUMINA</span>
+          <span class="logo-subtitle">Science-backed skincare</span>
+        </div>
+      </a>
+
+      <nav class="nav-desktop">
+        <a href="#hero" class="nav-link">Problem</a>
+        <div class="nav-dropdown">
+          <a href="#bundles" class="nav-link">Products</a>
+          <div class="nav-dropdown-menu">
+            <a href="recoveryserum/recovery.html">Recovery Serum</a>
+            <a href="daily-serum/daily.html">Daily Serum</a>
+          </div>
+        </div>
+        <a href="#bundles" class="nav-link">Bundles</a>
+        <a href="#skin-check" class="nav-link">Quiz</a>
+        <a href="#science" class="nav-link">Science</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </nav>
+
+      <div class="header-ctas">
+        <a href="#bundles" class="btn-secondary" style="display: none;">Shop Bundles</a>
+        <a href="#email-capture" class="btn-primary">Join Waitlist</a>
+      </div>
+
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <nav class="mobile-nav" id="mobile-nav">
+      <a href="#hero">Problem</a>
+      <a href="#bundles">Bundles</a>
+      <a href="recoveryserum/recovery.html">Recovery Serum</a>
+      <a href="daily-serum/daily.html">Daily Serum</a>
+      <a href="#skin-check">Quiz</a>
+      <a href="#science">Science</a>
+      <a href="#faq">FAQ</a>
+      <a href="#email-capture" style="background: var(--primary); color: white; text-align: center; margin-top: 8px;">Join Waitlist</a>
+    </nav>
+  </header>
+
+  <!-- ========================================
+       HERO
+       ======================================== -->
+  <section id="hero" class="hero py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="hero-grid">
+        <div class="fade-in">
+          <h1>Pro-level skin results, step by step.</h1>
+          <p class="mt-4 text-lg text-slate-600">
+            Recovery vials for stressed skin, a daily serum for long-term results, and clear instructions so you always know what to use and when.
+          </p>
+
+          <div class="hero-ctas mt-8">
+            <a href="#bundles" class="btn-primary">Shop the system</a>
+            <a href="#skin-check" class="btn-secondary">Take quick skin check</a>
+          </div>
+
+          <p class="mt-4 text-sm text-slate-500">
+            Houston-made &bull; Small-batch &bull; Pharmaceutical-grade
+          </p>
+        </div>
+
+        <div class="fade-in">
+          <div class="product-preview">
+            <div class="product-image-container">
+              <img src="images/recovery_serum.png" alt="LUMINA Post-Microneedling Recovery Serum 5mL" class="product-image">
+              <span class="product-label">Recovery Vial</span>
+            </div>
+            <div class="product-image-container">
+              <img src="images/daily_serum.png" alt="LUMINA Daily Maintenance Serum 15mL" class="product-image">
+              <span class="product-label">Daily Serum</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       FEATURED BUNDLES
+       ======================================== -->
+  <section id="bundles" class="bundles py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl font-bold">Choose Your Kit</h2>
+      <p class="mt-2 text-slate-600">Pre-order now for Spring 2026 launch. Early supporters get 25% off + free shipping.</p>
+
+      <div class="bundle-grid mt-8">
+        <!-- Starter Kit -->
+        <div class="bundle-card">
+          <span class="bundle-badge">SAVE $15</span>
+          <div class="bundle-images">
+            <img src="images/daily_serum.png" alt="Daily Serum" class="bundle-product-img">
+            <img src="images/recovery_serum.png" alt="Recovery Vial" class="bundle-product-img bundle-product-img-small">
+          </div>
+          <h3 class="bundle-name">Starter Kit</h3>
+          <div class="bundle-price">$60</div>
+
+          <div class="bundle-includes">
+            <h4>Includes:</h4>
+            <ul>
+              <li>1x Daily Serum (15mL)</li>
+              <li>2x Recovery Vials (5mL each)</li>
+              <li>Getting Started Safety Guide</li>
+            </ul>
+          </div>
+
+          <div class="bundle-best-for">
+            <strong>Best for:</strong> First-time users who want to try both products
+          </div>
+
+          <a href="#skin-check" class="bundle-quiz-link">Not sure which one? Take the quick skin check &rarr;</a>
+
+          <a href="#email-capture" class="btn-primary">Reserve at Launch</a>
+        </div>
+
+        <!-- Monthly Protocol -->
+        <div class="bundle-card">
+          <span class="bundle-badge">SAVE $24</span>
+          <div class="bundle-images">
+            <img src="images/daily_serum.png" alt="Daily Serum" class="bundle-product-img">
+            <img src="images/recovery_serum.png" alt="Recovery Vial" class="bundle-product-img bundle-product-img-small">
+            <img src="images/recovery_serum.png" alt="Recovery Vial" class="bundle-product-img bundle-product-img-small">
+          </div>
+          <h3 class="bundle-name">Monthly Protocol</h3>
+          <div class="bundle-price">$88</div>
+
+          <div class="bundle-includes">
+            <h4>Includes:</h4>
+            <ul>
+              <li>1x Daily Serum (15mL)</li>
+              <li>4x Recovery Vials (5mL each)</li>
+              <li>Complete Safety & Protocol Guide</li>
+            </ul>
+          </div>
+
+          <div class="bundle-best-for">
+            <strong>Best for:</strong> Regular microneedling or weekly treatments
+          </div>
+
+          <a href="#skin-check" class="bundle-quiz-link">Not sure which one? Take the quick skin check &rarr;</a>
+
+          <a href="#email-capture" class="btn-primary">Reserve at Launch</a>
+        </div>
+
+        <!-- Two-Month System -->
+        <div class="bundle-card">
+          <span class="bundle-badge">SAVE $36</span>
+          <div class="bundle-images">
+            <img src="images/daily_serum.png" alt="Daily Serum" class="bundle-product-img">
+            <img src="images/daily_serum.png" alt="Daily Serum" class="bundle-product-img">
+            <img src="images/recovery_serum.png" alt="Recovery Vial" class="bundle-product-img bundle-product-img-small">
+          </div>
+          <h3 class="bundle-name">Two-Month System</h3>
+          <div class="bundle-price">$150</div>
+
+          <div class="bundle-includes">
+            <h4>Includes:</h4>
+            <ul>
+              <li>2x Daily Serum (15mL each)</li>
+              <li>6x Recovery Vials (5mL each)</li>
+              <li>Safety Guide + Priority Support</li>
+            </ul>
+          </div>
+
+          <div class="bundle-best-for">
+            <strong>Best for:</strong> Committed users or couples
+          </div>
+
+          <a href="#skin-check" class="bundle-quiz-link">Not sure which one? Take the quick skin check &rarr;</a>
+
+          <a href="#email-capture" class="btn-primary">Reserve at Launch</a>
+        </div>
+      </div>
+
+      <div class="individual-note mt-8">
+        <p class="text-sm text-slate-700">
+          <strong>Prefer individual products?</strong> Daily Serum ($36) and Recovery Vials ($19 each) available separately at launch.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       BRIDGE TO QUIZ
+       ======================================== -->
+  <section class="bridge py-8">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-lg text-slate-700">
+        Not sure where to start? Answer 2 quick questions and we'll suggest a safe starting point.
+      </p>
+      <a href="#skin-check" class="btn-secondary mt-4">Take Quick Skin Check</a>
+    </div>
+  </section>
+
+  <!-- ========================================
+       QUIZ
+       ======================================== -->
+  <section id="skin-check" class="quiz py-16">
+    <div class="max-w-3xl mx-auto px-4">
+      <div class="text-center mb-8">
+        <h2 class="text-2xl font-bold">Quick Skin Check</h2>
+        <p class="mt-2 text-slate-600">Two questions to help you choose a safe starting point.</p>
+      </div>
+
+      <!-- Question 1 -->
+      <div id="q1-container" class="quiz-container">
+        <div class="quiz-progress">Question 1 of 2</div>
+        <p class="quiz-question">If you had to pick one, how does your skin feel right now?</p>
+
+        <div class="quiz-options">
+          <button class="quiz-btn" data-answer="touchy">
+            <div class="quiz-btn-title">Touchy and easily upset</div>
+            <div class="quiz-btn-desc">Tight, red, reactive, or recently over-treated</div>
+          </button>
+
+          <button class="quiz-btn" data-answer="normal">
+            <div class="quiz-btn-title">Pretty normal - just aging / dull</div>
+            <div class="quiz-btn-desc">Stable barrier, looking for anti-aging results</div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Question 2A (if touchy) -->
+      <div id="q2a-container" class="quiz-container hidden mt-6">
+        <div class="quiz-progress">Question 2 of 2</div>
+        <p class="quiz-question">Is that mostly because of active breakouts (pimples / acne)?</p>
+
+        <div class="quiz-options">
+          <button class="quiz-btn" data-result="touchy-acne">
+            <div class="quiz-btn-title">Yes, mostly breakouts</div>
+          </button>
+
+          <button class="quiz-btn" data-result="touchy-not-acne">
+            <div class="quiz-btn-title">No, more from products / treatments / dryness</div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Question 2B (if normal) -->
+      <div id="q2b-container" class="quiz-container hidden mt-6">
+        <div class="quiz-progress">Question 2 of 2</div>
+        <p class="quiz-question">Are you interested in adding things like microneedling or peels, or would you rather stay non-invasive for now?</p>
+
+        <div class="quiz-options">
+          <button class="quiz-btn" data-result="normal-noninvasive">
+            <div class="quiz-btn-title">Keep it non-invasive (serums only)</div>
+          </button>
+
+          <button class="quiz-btn" data-result="normal-procedures">
+            <div class="quiz-btn-title">I'm open to procedures (with guidance)</div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Result: Touchy + Acne -->
+      <div id="result-touchy-acne" class="quiz-result hidden mt-8">
+        <div class="text-center mb-6">
+          <span class="result-badge">Your Path</span>
+          <h3 class="result-title">Start with the Daily Serum</h3>
+        </div>
+
+        <p class="text-lg">
+          Active breakouts + stressed skin = not the time for needles or aggressive treatments. That can spread bacteria and make things worse.
+        </p>
+
+        <div class="result-plan">
+          <h4>Your plan:</h4>
+          <p class="text-sm">Keep your acne treatment going, add <strong>Daily Serum</strong> 2-3x/week for barrier support.</p>
+        </div>
+
+        <p>
+          <strong>Why it works:</strong><br>
+          Niacinamide (3%) supports your barrier, GHK-Cu (0.05%) helps with repair signaling, Matrixyl (3%) works on texture - all without triggering more inflammation.
+        </p>
+
+        <p class="text-sm text-slate-600 mt-4">
+          <strong>Save the Recovery Vials for later</strong> - they're designed for post-treatment skin, not active acne.
+        </p>
+
+        <div class="result-ctas">
+          <a href="#email-capture" class="btn-primary flex-1">Reserve Daily Serum - $36</a>
+          <button class="btn-secondary" onclick="document.getElementById('why-no-recovery-acne').classList.toggle('hidden')">
+            Why no Recovery Vial right now?
+          </button>
+        </div>
+
+        <div id="why-no-recovery-acne" class="expandable-info hidden">
+          <p>Recovery Vials are formulated for stressed skin <em>after treatments</em> (microneedling, peels, over-exfoliation) - skin that's disrupted but not infected. Active acne is an inflammatory/bacterial condition that needs targeted acne treatment first. Once breakouts are under control and your barrier is calmer, Recovery Vials become a useful tool for "I overdid it" moments.</p>
+        </div>
+      </div>
+
+      <!-- Result: Touchy + NOT Acne -->
+      <div id="result-touchy-not-acne" class="quiz-result hidden mt-8">
+        <div class="text-center mb-6">
+          <span class="result-badge">Your Path</span>
+          <h3 class="result-title">Recovery Vials First</h3>
+        </div>
+
+        <p class="text-lg">
+          Your skin is stressed but not from acne - this usually means too many actives, recent treatments, weather, or barrier fatigue.
+        </p>
+
+        <div class="result-plan">
+          <h4>Your plan:</h4>
+          <ul class="text-sm space-y-1">
+            <li>Strip back to gentle cleanser + bland moisturizer</li>
+            <li>Add a Recovery Vial on "I pushed too far" nights</li>
+            <li>Once calm, introduce Daily Serum slowly (2-3x/week)</li>
+          </ul>
+        </div>
+
+        <p>
+          <strong>Why Recovery Vials:</strong><br>
+          Formulated without niacinamide or Matrixyl - just GHK-Cu (0.1%), centella (5%), aloe, and humectants to be kinder to skin that's already had enough.
+        </p>
+
+        <div class="result-ctas">
+          <a href="#email-capture" class="btn-primary flex-1">Reserve Starter Kit - $60</a>
+          <a href="#bundles" class="btn-secondary">See all bundles</a>
+        </div>
+
+        <p class="mt-4 text-sm text-slate-600 text-center">
+          Starter Kit includes Recovery Vials + Daily Serum for when you're ready to reintroduce it.
+        </p>
+      </div>
+
+      <!-- Result: Normal + Non-invasive -->
+      <div id="result-normal-noninvasive" class="quiz-result hidden mt-8">
+        <div class="text-center mb-6">
+          <span class="result-badge">Your Path</span>
+          <h3 class="result-title">Daily Serum is Your Starting Point</h3>
+        </div>
+
+        <p class="text-lg">
+          Your skin feels stable - you're just looking for long-term improvements in texture, firmness, and tone. Smart serums over needles makes total sense.
+        </p>
+
+        <div class="result-plan">
+          <h4>Your plan:</h4>
+          <p class="text-sm">Use <strong>Daily Serum</strong> 3-5x/week over a gentle routine + daily SPF 30+.</p>
+        </div>
+
+        <p>
+          <strong>What's in it:</strong><br>
+          GHK-Cu (0.05%) + Matrixyl 3000 (3%) + niacinamide (3%) in a hydrating base with glycerin, aloe, and hyaluronic acid.
+        </p>
+
+        <p class="text-sm text-slate-600 mt-4">
+          Keep a Recovery Vial on hand for rare "overdid it" moments (post-peel, climate shock, barrier wobble), but your day-to-day work is the Daily Serum.
+        </p>
+
+        <div class="result-ctas">
+          <a href="#email-capture" class="btn-primary flex-1">Reserve Daily Serum - $36</a>
+          <button class="btn-secondary" onclick="document.getElementById('when-recovery-vial').classList.toggle('hidden')">
+            When would I need Recovery Vials?
+          </button>
+        </div>
+
+        <div id="when-recovery-vial" class="expandable-info hidden">
+          <p>Recovery Vials are for "big stress" events: after at-home peels, post-microneedling (if you ever try it), over-exfoliation accidents, windburn, or any time your barrier feels fried. If your routine stays gentle and consistent, you might use 1-2 vials per month or less.</p>
+        </div>
+      </div>
+
+      <!-- Result: Normal + Open to Procedures -->
+      <div id="result-normal-procedures" class="quiz-result hidden mt-8">
+        <div class="text-center mb-6">
+          <span class="result-badge">Your Path</span>
+          <h3 class="result-title">You're a System User</h3>
+        </div>
+
+        <p class="text-lg">
+          Your skin is stable and you're open to treatments like microneedling or peels - ideally with guidance. LUMINA works best as a two-part system for you.
+        </p>
+
+        <div class="result-plan">
+          <h4>Your plan:</h4>
+          <ul class="text-sm space-y-1">
+            <li><strong>Daily Serum (15mL):</strong> Your steady remodeling base (GHK-Cu + Matrixyl + niacinamide)</li>
+            <li><strong>Recovery Vials (5mL):</strong> Reserved for post-treatment or "big stress" nights</li>
+          </ul>
+        </div>
+
+        <p class="mt-4">
+          <strong>Critical timing rules:</strong>
+        </p>
+        <ul class="text-sm mt-2 space-y-1">
+          <li>Talk to a professional before starting microneedling</li>
+          <li>Skip Daily Serum on treatment day - too many actives</li>
+          <li>Use Recovery Vial + gentle products while skin is freshly stressed</li>
+          <li>Reintroduce Daily Serum only once everything looks/feels calm</li>
+        </ul>
+
+        <div class="result-ctas">
+          <a href="#email-capture" class="btn-primary flex-1">Reserve Monthly Protocol - $88</a>
+          <a href="#bundles" class="btn-secondary">See all bundles</a>
+        </div>
+
+        <p class="mt-4 text-sm text-slate-600 text-center">
+          <strong>Remember:</strong> Procedures are always optional. If you're unsure, start with Daily Serum only and revisit treatments later.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       EMAIL CAPTURE
+       ======================================== -->
+  <section id="email-capture" class="email-capture py-16">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold">Get Early Access + The Deep Dive Guide</h2>
+      <p class="mt-4 text-lg opacity-90">
+        Join the waitlist for Spring 2026 launch and get our comprehensive Copper Peptide Field Guide - everything from GHK-Cu science to post-microneedling safety protocols.
+      </p>
+
+      <form id="waitlist-form" class="email-form mt-8 max-w-xl mx-auto" method="POST" action="https://formspree.io/f/xreevkrn">
+        <input type="hidden" name="source" value="lumina-landing-quiz-flow">
+
+        <input
+          name="name"
+          required
+          placeholder="Your name"
+        />
+        <input
+          name="email"
+          type="email"
+          required
+          placeholder="Email address"
+        />
+
+        <button type="submit" style="grid-column: 1 / -1;">
+          Join Waitlist - Get 25% Off + Free Guide
+        </button>
+      </form>
+
+      <div class="email-benefits mt-6">
+        <div>25% off first order</div>
+        <div>Free shipping</div>
+        <div>Exclusive launch updates</div>
+        <div>PDF safety guide</div>
+      </div>
+
+      <p id="form-success-msg" class="hidden mt-4 success-msg">
+        Perfect! Check your email for the Deep Dive Guide + launch updates.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========================================
+       SAFETY
+       ======================================== -->
+  <section id="safety" class="safety py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold">Safety Isn't a Disclaimer. It's the Product Brief.</h2>
+        <p class="mt-2 text-slate-600">We built LUMINA around what keeps skin safe, not just what gets results faster.</p>
+      </div>
+
+      <div class="safety-grid">
+        <!-- Card 1 -->
+        <div class="safety-card">
+          <div class="safety-icon">&#9878;</div>
+          <h3>Formulation Guardrails</h3>
+          <ul>
+            <li>No fragrance, no essential oils, no exfoliating acids</li>
+            <li>Recovery Vial: no niacinamide or Matrixyl (to keep disrupted skin calm)</li>
+            <li>Daily Serum: barrier-friendly actives only</li>
+            <li>Modern preservative system (Optiphen Plus - paraben & formaldehyde-free)</li>
+          </ul>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="safety-card">
+          <div class="safety-icon">&#9888;</div>
+          <h3>Use-With-Care Guidance</h3>
+          <ul>
+            <li>Always patch test before use</li>
+            <li>Do not use on broken, infected, or bleeding skin</li>
+            <li>Follow your clinician or device guidelines for microneedling frequency</li>
+            <li>Don't use Daily Serum immediately after microneedling (use Recovery Vial only)</li>
+          </ul>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="safety-card">
+          <div class="safety-icon">&#128300;</div>
+          <h3>Testing & Transparency</h3>
+          <ul>
+            <li>Batch 001: stability + micro testing in progress</li>
+            <li>We'll publish key data (pH range, preservative efficacy) at launch</li>
+            <li>Each bottle and vial labeled with batch + best-by date</li>
+            <li>Declared percentages, no "proprietary blends"</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="safety-philosophy mt-12">
+        <h4>Our philosophy:</h4>
+        <p class="text-slate-700">
+          If a route might get you results faster but increases your risk of damage, we'd rather be slower and safer. That's why we separate stressed-skin care from everyday anti-aging, and why we'll always tell you to pull back if your skin pushes back.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       SCIENCE / INGREDIENTS
+       ======================================== -->
+  <section id="science" class="science py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-3">Why LUMINA Works</h2>
+      <p class="text-center text-slate-600 mb-12">
+        Studied actives at meaningful concentrations, packaged to preserve potency.
+        <button class="nerd-lane-toggle" onclick="document.getElementById('nerd-lane').classList.toggle('hidden')">
+          (Nerd lane - optional)
+        </button>
+      </p>
+
+      <!-- Main ingredient cards -->
+      <div class="science-grid mb-8">
+        <!-- GHK-Cu -->
+        <div class="ingredient-card">
+          <div class="ingredient-header">
+            <h3>GHK-Cu</h3>
+            <button class="info-btn" onclick="document.getElementById('popup-ghkcu').classList.remove('hidden')">
+              &#9432; What is this?
+            </button>
+          </div>
+          <p class="text-sm text-slate-700">
+            Copper signaling peptide that supports collagen synthesis and wound repair. Used at clinical strengths for results.
+          </p>
+          <div class="ingredient-concentration">
+            Recovery Vial: 0.1% | Daily Serum: 0.05%
+          </div>
+        </div>
+
+        <!-- Matrixyl 3000 -->
+        <div class="ingredient-card">
+          <div class="ingredient-header">
+            <h3>Matrixyl 3000</h3>
+            <button class="info-btn" onclick="document.getElementById('popup-matrixyl').classList.remove('hidden')">
+              &#9432; What is this?
+            </button>
+          </div>
+          <p class="text-sm text-slate-700">
+            Peptide complex that supports collagen and elasticity. Designed for long-term firmness and wrinkle appearance.
+          </p>
+          <div class="ingredient-concentration">
+            Daily Serum only: 3% (not in Recovery Vial)
+          </div>
+        </div>
+
+        <!-- Niacinamide -->
+        <div class="ingredient-card">
+          <div class="ingredient-header">
+            <h3>Niacinamide</h3>
+            <button class="info-btn" onclick="document.getElementById('popup-niacinamide').classList.remove('hidden')">
+              &#9432; What is this?
+            </button>
+          </div>
+          <p class="text-sm text-slate-700">
+            Supports barrier function, reduces inflammation, and improves skin tone and texture.
+          </p>
+          <div class="ingredient-concentration">
+            Daily Serum only: 3% (not in Recovery Vial)
+          </div>
+        </div>
+      </div>
+
+      <!-- Botanicals row -->
+      <div class="grid grid-cols-1 gap-6" style="max-width: 768px; margin: 0 auto;">
+        <div class="ingredient-card" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+          <div>
+            <h4 class="font-bold mb-2">Centella Asiatica (Cica)</h4>
+            <p class="text-sm text-slate-700">
+              Used in scar and wound formulations to support skin repair and calm inflammation. We use a water-based extract at 5% in Recovery Vials.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-bold mb-2">Aloe Vera</h4>
+            <p class="text-sm text-slate-700">
+              Well-known for burns and post-procedure soothing. Present in both products as a soothing, hydrating component.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nerd lane -->
+      <div id="nerd-lane" class="nerd-lane hidden mt-12">
+        <h3>For skin science nerds: The deeper story</h3>
+
+        <div class="space-y-6 text-sm text-slate-700">
+          <div>
+            <h4>GHK-Cu & Collagen Pathways</h4>
+            <p>
+              In cell and animal models, GHK-Cu encourages fibroblasts to make more collagen, elastin and glycosaminoglycans (the "scaffolding" that keeps skin bouncy). It helps balance enzymes that break down old collagen (MMPs) vs. those that build new matrix. In some models, it even nudges growth-factor-related pathways such as TGF-Beta/Smad toward less scarring and more organized tissue.
+            </p>
+            <p class="mt-2 text-slate-600">
+              Most of these studies use isolated cells or animal models. We treat them as supporting evidence for using GHK-Cu in skincare - not as a promise that one serum can rewrite your biology.
+            </p>
+          </div>
+
+          <div>
+            <h4>What We Know vs. Don't Know Yet</h4>
+            <p><strong>We know:</strong> GHK-Cu can stimulate collagen and ECM components in fibroblast cultures. GHK-Cu creams have improved skin appearance (firmness, wrinkles, texture) in small human studies.</p>
+            <p class="mt-2"><strong>We don't fully know:</strong> The perfect dose, schedule, or delivery system for every skin type. Exactly how much of the lab magic translates 1:1 to real-world cosmetic doses.</p>
+            <p class="mt-2"><strong>Our stance:</strong> We use peer-reviewed data to set our target ranges and then test our actual formulas for stability, safety, and user tolerance. We'll publish key Batch 001 data at launch.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popups -->
+  <div id="popup-ghkcu" class="popup-overlay hidden" onclick="this.classList.add('hidden')">
+    <div class="popup-content" onclick="event.stopPropagation()">
+      <div class="popup-header">
+        <h3>What is GHK-Cu?</h3>
+        <button class="popup-close" type="button" onclick="event.stopPropagation(); document.getElementById('popup-ghkcu').classList.add('hidden');">&#10005;</button>
+      </div>
+      <div class="space-y-3 text-sm text-slate-700">
+        <p>
+          <strong>GHK-Cu (Copper Tripeptide-1)</strong><br>
+          Your body already makes this small peptide and pairs it with copper. Levels drop with age. In skin research, GHK-Cu has been shown to support collagen and elastin production and to improve the look of texture, firmness, and fine lines.
+        </p>
+        <p>
+          We treat it as a gentle "repair signal" - not magic, but a smart nudge in the right direction.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div id="popup-matrixyl" class="popup-overlay hidden" onclick="this.classList.add('hidden')">
+    <div class="popup-content" onclick="event.stopPropagation()">
+      <div class="popup-header">
+        <h3>What is Matrixyl 3000?</h3>
+        <button class="popup-close" type="button" onclick="event.stopPropagation(); document.getElementById('popup-matrixyl').classList.add('hidden');">&#10005;</button>
+      </div>
+      <div class="space-y-3 text-sm text-slate-700">
+        <p>
+          <strong>Matrixyl 3000 (Daily Serum only)</strong><br>
+          Matrixyl 3000 is a blend of two peptides (palmitoyl tripeptide-1 and palmitoyl tetrapeptide-7) that signal skin to support collagen and elasticity. It's been used for years in anti-aging formulas aimed at firmness and wrinkle appearance.
+        </p>
+        <p>
+          We use it at 3% in the Daily Remodeling Serum for long-term, low-noise support.
+        </p>
+        <p class="font-semibold">
+          It is <u>not included</u> in the Recovery Vial, which is kept as simple and gentle as possible for disrupted skin.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div id="popup-niacinamide" class="popup-overlay hidden" onclick="this.classList.add('hidden')">
+    <div class="popup-content" onclick="event.stopPropagation()">
+      <div class="popup-header">
+        <h3>What is Niacinamide?</h3>
+        <button class="popup-close" type="button" onclick="event.stopPropagation(); document.getElementById('popup-niacinamide').classList.add('hidden');">&#10005;</button>
+      </div>
+      <div class="space-y-3 text-sm text-slate-700">
+        <p>
+          <strong>Niacinamide (Vitamin B3)</strong><br>
+          A well-studied ingredient used at 2-5% in clinical moisturizers for barrier function, tone improvement, and inflammation reduction.
+        </p>
+        <p>
+          We use it at 3% in the Daily Serum to support a stronger, more resilient barrier while the peptides work on texture and firmness.
+        </p>
+        <p class="font-semibold">
+          Not included in Recovery Vials - we keep those formulas minimal for stressed skin.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================
+       FAQ
+       ======================================== -->
+  <section id="faq" class="faq py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>What is LUMINA in one sentence?</summary>
+          <div class="faq-answer">
+            <p>LUMINA is a two-product copper peptide skincare system - a Recovery Vial for stressed or post-treatment skin, and a Daily Serum for long-term remodeling - with clear guidance on when to use each.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What's the difference between the Recovery Vial and Daily Serum?</summary>
+          <div class="faq-answer">
+            <p><strong>Recovery Vial (5mL):</strong> 0.1% GHK-Cu + centella + aloe. Minimal formula designed for disrupted skin - post-microneedling, post-peel, barrier damage. No niacinamide, no Matrixyl.</p>
+            <p class="mt-2"><strong>Daily Serum (15mL):</strong> 0.05% GHK-Cu + 3% Matrixyl 3000 + 3% niacinamide. More actives for everyday anti-aging on stable skin.</p>
+            <p class="mt-2">Think of Recovery as your emergency kit and Daily as your steady routine.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can I use the Daily Serum immediately after microneedling?</summary>
+          <div class="faq-answer">
+            <p><strong>No.</strong> Immediately post-needling, your skin has thousands of tiny channels open. Stick to the Recovery Vial (or your clinician's recommended serum) for the first 24-48 hours. Reintroduce Daily Serum only after your skin looks and feels calm.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What can I put on my skin right after microneedling?</summary>
+          <div class="faq-answer">
+            <p>Use the Recovery Vial or a gentle, fragrance-free, non-acidic hydrator. Avoid anything with exfoliating acids, vitamin C (at high concentrations), retinoids, or fragrance for at least 24-48 hours. When in doubt, ask your clinician.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do I still need sunscreen if I'm using copper peptides?</summary>
+          <div class="faq-answer">
+            <p><strong>Yes, always.</strong> Copper peptides don't provide any UV protection. Use a broad-spectrum SPF 30+ daily, especially if you're doing any treatments that disrupt your barrier.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How should I patch test LUMINA products?</summary>
+          <div class="faq-answer">
+            <p>Apply a small amount behind your ear or on your inner forearm. Wait 24-48 hours. If you see redness, itching, or irritation, don't use the product on your face. This is especially important if you have sensitive or reactive skin.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can I use LUMINA if I don't microneedle at all?</summary>
+          <div class="faq-answer">
+            <p>Absolutely. The Daily Serum is designed for everyday anti-aging on stable skin - no procedures required. Keep a Recovery Vial on hand for occasional "overdid it" moments (post-peel, climate shock, barrier wobble), but you can use the Daily Serum as your main peptide product.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Are these products safe during pregnancy or breastfeeding?</summary>
+          <div class="faq-answer">
+            <p>We haven't conducted specific safety testing for pregnant or nursing individuals. If you're pregnant or breastfeeding, please consult your healthcare provider before using any new skincare products, including LUMINA.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What if my skin stings, burns, or stays red after using LUMINA?</summary>
+          <div class="faq-answer">
+            <p>Stop using the product immediately. Rinse gently with cool water and apply a bland, fragrance-free moisturizer. If irritation persists, consult a dermatologist. This is exactly what we mean by "listen to your skin" - if it pushes back, pull back.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How long until I see results?</summary>
+          <div class="faq-answer">
+            <p>Peptide-based skincare is a slow game. Most users report noticeable improvements in texture and firmness after 8-12 weeks of consistent use. If you're microneedling, you may see faster results, but the timeline varies by individual.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       FINAL CTA
+       ======================================== -->
+  <section id="final-cta" class="final-cta py-16">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold">Ready for Pro-Level Results?</h2>
+      <p class="mt-4 text-lg opacity-90">
+        Join the waitlist for Spring 2026 launch. Early supporters get 25% off + free shipping + exclusive safety guide.
+      </p>
+
+      <a href="#email-capture" class="cta-btn mt-8">Join the Waitlist</a>
+
+      <p class="mt-6 text-sm opacity-75">
+        Houston-made &bull; Small-batch &bull; Pharmaceutical-grade &bull; Safety-first
+      </p>
+    </div>
+  </section>
+
+  <!-- ========================================
+       FOOTER
+       ======================================== -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="images/logo-icon.png" alt="LUMINA" class="footer-logo-icon">
+          <div class="footer-logo">LUMINA</div>
+        </div>
+        <p class="footer-tagline">Science-backed copper peptide skincare</p>
+        <div class="footer-social mt-4">
+          <a href="#">Instagram</a>
+          <a href="#">TikTok</a>
+          <a href="mailto:luminaskincare.lab@gmail.com">Email</a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#bundles">Bundles</a></li>
+          <li><a href="#skin-check">Quiz</a></li>
+          <li><a href="#science">Science</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="recoveryserum/recovery.html">Recovery Serum</a></li>
+          <li><a href="daily-serum/daily.html">Daily Serum</a></li>
+          <li><a href="#bundles">Starter Kit</a></li>
+          <li><a href="#bundles">Monthly Protocol</a></li>
+          <li><a href="#bundles">Two-Month System</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="mailto:luminaskincare.lab@gmail.com">Contact</a></li>
+          <li><a href="#safety">Safety</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-disclaimer">
+        This product is not intended to diagnose, treat, cure, or prevent any disease. Not medical advice.
+      </p>
+      <p class="footer-copyright">
+        &copy; 2026 LUMINA Skincare. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ========================================
+       JAVASCRIPT
+       ======================================== -->
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileNav.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking a link
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+      });
+    });
+
+    // Quiz functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      let q1Answer = null;
+
+      // Q1 handlers
+      document.querySelectorAll('#q1-container .quiz-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          q1Answer = this.dataset.answer;
+
+          // Hide Q1
+          document.getElementById('q1-container').style.display = 'none';
+
+          // Show appropriate Q2
+          if (q1Answer === 'touchy') {
+            document.getElementById('q2a-container').classList.remove('hidden');
+          } else {
+            document.getElementById('q2b-container').classList.remove('hidden');
+          }
+
+          // Smooth scroll to Q2
+          setTimeout(() => {
+            const q2 = q1Answer === 'touchy' ? '#q2a-container' : '#q2b-container';
+            document.querySelector(q2).scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }, 100);
+        });
+      });
+
+      // Q2 handlers (both A and B)
+      document.querySelectorAll('#q2a-container .quiz-btn, #q2b-container .quiz-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const resultId = this.dataset.result;
+
+          // Hide both Q2 containers
+          document.getElementById('q2a-container').classList.add('hidden');
+          document.getElementById('q2b-container').classList.add('hidden');
+
+          // Show result
+          document.getElementById('result-' + resultId).classList.remove('hidden');
+
+          // Smooth scroll to result
+          setTimeout(() => {
+            document.getElementById('result-' + resultId).scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }, 100);
+        });
+      });
+    });
+
+    // Email form handling
+    const form = document.getElementById('waitlist-form');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const submitBtn = form.querySelector('button[type=submit]');
+      const originalText = submitBtn.textContent;
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Joining...';
+
+      try {
+        const formData = new FormData(form);
+        const resp = await fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (resp.ok) {
+          form.reset();
+          document.getElementById('form-success-msg').classList.remove('hidden');
+          submitBtn.textContent = "You're on the list";
+        } else {
+          alert('Something went wrong. Please try again.');
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalText;
+        }
+      } catch (err) {
+        alert('Network error. Please try again.');
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      }
+    });
+
+    // Smooth scroll for all anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href && href.length > 1) {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      });
+    });
+
+    // Fade-in on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Close popups with Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.popup-overlay').forEach(popup => {
+          popup.classList.add('hidden');
+        });
+      }
+    });
+  </script>
+</body>
+</html>
